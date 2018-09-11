@@ -14,7 +14,7 @@
     <Key>
       <PropertyRef Name="CaTrucID" />
     </Key>
-    <Property Name="CaTrucID" Type="int" Nullable="false" />
+    <Property Name="CaTrucID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="YeuCauID" Type="int" />
     <Property Name="TenCa" Type="varchar" MaxLength="15" />
   </EntityType>

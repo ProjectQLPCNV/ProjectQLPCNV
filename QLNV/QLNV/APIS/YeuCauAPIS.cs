@@ -14,7 +14,7 @@ namespace QLNV.APIS
         //GetYeuCau
         public IQueryable<YeuCau> GetYeuCau()
         {
-            return db.YeuCau;
+            return db.YeuCau.OrderByDescending(x=>x.YeuCauID);
         }
         public YeuCau GetYeuCauID(int Id)
         {
@@ -36,7 +36,14 @@ namespace QLNV.APIS
             }
             else
             {
+                List<CaTruc> lstCaTruc = yeuCau.CaTruc.ToList();
+                yeuCau.CaTruc = null;
                 db.YeuCau.Add(yeuCau);
+                foreach(CaTruc caTruc in lstCaTruc)
+                {
+                    caTruc.YeuCauID = yeuCau.YeuCauID;
+                    db.CaTruc.Add(caTruc);
+                }
                 db.SaveChanges();
             }
         }

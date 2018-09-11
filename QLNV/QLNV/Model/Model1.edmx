@@ -19,7 +19,7 @@
           <Key>
             <PropertyRef Name="CaTrucID" />
           </Key>
-          <Property Name="CaTrucID" Type="int" Nullable="false" />
+          <Property Name="CaTrucID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="YeuCauID" Type="int" />
           <Property Name="TenCa" Type="varchar" MaxLength="15" />
         </EntityType>
@@ -154,7 +154,7 @@
           <Key>
             <PropertyRef Name="CaTrucID" />
           </Key>
-          <Property Name="CaTrucID" Type="Int32" Nullable="false" />
+          <Property Name="CaTrucID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="YeuCauID" Type="Int32" />
           <Property Name="TenCa" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="YeuCau" Relationship="Self.FK_CaTruc_BangYeuCau" FromRole="CaTruc" ToRole="YeuCau" />

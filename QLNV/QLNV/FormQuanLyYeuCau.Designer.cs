@@ -51,6 +51,7 @@
             this.gridYeuCau.RowTemplate.Height = 24;
             this.gridYeuCau.Size = new System.Drawing.Size(788, 273);
             this.gridYeuCau.TabIndex = 0;
+            this.gridYeuCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridYeuCau_CellClick);
             // 
             // btnTimKiem
             // 

@@ -1,0 +1,6 @@
+﻿Generated model file: QLNVModel.edmx.
+Loading metadata from the database took 00:00:00.4920342.
+Generating the model took 00:00:02.0906235.
+Generated model file: QLNVModel.edmx.
+Loading metadata from the database took 00:00:00.4850227.
+Generating the model took 00:00:01.5577890.

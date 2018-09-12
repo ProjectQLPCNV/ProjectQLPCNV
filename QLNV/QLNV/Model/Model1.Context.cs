@@ -13,10 +13,10 @@ namespace QLNV.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class QLNVNhanVienEntities : DbContext
+    public partial class QLPCNhanVienEntities : DbContext
     {
-        public QLNVNhanVienEntities()
-            : base("name=QLNVNhanVienEntities")
+        public QLPCNhanVienEntities()
+            : base("name=QLPCNhanVienEntities")
         {
         }
     

@@ -18,6 +18,7 @@ namespace QLNV.Model
         public YeuCau()
         {
             this.CaTruc = new HashSet<CaTruc>();
+            this.PhanCong = new HashSet<PhanCong>();
         }
     
         public int YeuCauID { get; set; }
@@ -28,6 +29,8 @@ namespace QLNV.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CaTruc> CaTruc { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhanCong> PhanCong { get; set; }
         public virtual User User { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace QLNV
 {
     public partial class FormQuanLyYeuCau : Form
     {
-        YeuCauAPIS yeuCauAPIS = new YeuCauAPIS();
+        
         public FormQuanLyYeuCau()
         {
             InitializeComponent();
@@ -29,14 +29,15 @@ namespace QLNV
         {
             getDataGrid();
         }
+        YeuCauAPIS yeuCauAPIS = new YeuCauAPIS();
         void getDataGrid()
         {
             List<YeuCau> lstYeuCau = yeuCauAPIS.GetYeuCau().ToList();
             gridYeuCau.DataSource = lstYeuCau;
             gridYeuCau.Columns[0].HeaderText = "Mã Yêu Cầu";
             gridYeuCau.Columns[1].HeaderText = "Ngày Trực";
-            gridYeuCau.Columns[2].HeaderText = "Số Lượng Ca Trực";
-            gridYeuCau.Columns[4].HeaderText = "Số Lượng Người Trực";
+            gridYeuCau.Columns[2].HeaderText = "SL Ca Trực";
+            gridYeuCau.Columns[4].HeaderText = "SL Người Trực";
             gridYeuCau.Columns.Remove("User");
             gridYeuCau.Columns.Remove("IDAdmin");
             gridYeuCau.Columns.Remove("CaTruc");

@@ -18,8 +18,10 @@ namespace QLNV.Model
         public Nullable<int> CanBoID { get; set; }
         public string GhiChu { get; set; }
         public int PhanCongID { get; set; }
+        public Nullable<int> YeuCauID { get; set; }
     
         public virtual CanBo CanBo { get; set; }
         public virtual CaTruc CaTruc { get; set; }
+        public virtual YeuCau YeuCau { get; set; }
     }
 }

@@ -4,16 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2446c6bcec09464783f32e63ca0598f2" Name="Diagram1">
-        <EntityTypeShape EntityType="QLPCNhanVienModel.CanBo" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLPCNhanVienModel.CaTruc" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+      <Diagram DiagramId="12cb6d0724954b26ba1e98d50da6e135" Name="Diagram1">
+        <EntityTypeShape EntityType="QLPCNhanVienModel.CanBo" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPCNhanVienModel.CaTruc" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPCNhanVienModel.PhanCong" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPCNhanVienModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QLPCNhanVienModel.User" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLPCNhanVienModel.User" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="QLPCNhanVienModel.YeuCau" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_BangCanBo" ManuallyRouted="false" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_CaTruc_BangYeuCau" ManuallyRouted="false" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_CaTruc" ManuallyRouted="false" />
+        <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_YeuCau" ManuallyRouted="false" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_BangYeuCau_BangAdmin" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>

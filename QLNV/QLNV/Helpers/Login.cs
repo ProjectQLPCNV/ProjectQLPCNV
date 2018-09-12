@@ -9,7 +9,7 @@ namespace QLNV.Helpers
 {
     class Login
     {
-        static QLNVNhanVienEntities db = new QLNVNhanVienEntities();
+        static QLPCNhanVienEntities db = new QLPCNhanVienEntities();
         public static bool isLoginSess= false;
         public static string ErrorLogin;
         public static void LoginUser(string taiKhoan, string matKhau)

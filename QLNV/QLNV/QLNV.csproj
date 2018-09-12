@@ -58,37 +58,6 @@
   <ItemGroup>
     <Compile Include="APIS\CanBoAPIS.cs" />
     <Compile Include="APIS\YeuCauAPIS.cs" />
-    <Compile Include="FormDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangNhap.Designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormQuanLyCanBo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormQuanLyCanBo.Designer.cs">
-      <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTrangChu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTrangChu.Designer.cs">
-      <DependentUpon>FormTrangChu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormQuanLyYeuCau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormQuanLyYeuCau.Designer.cs">
-      <DependentUpon>FormQuanLyYeuCau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormChonCa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChonCa.Designer.cs">
-      <DependentUpon>FormChonCa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Helpers\Login.cs" />
     <Compile Include="Model\CanBo.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -122,22 +91,62 @@
     <Compile Include="Model\YeuCau.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormChonCa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormChonCa.Designer.cs">
+      <DependentUpon>FormChonCa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQuanLyCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyCanBo.Designer.cs">
+      <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQuanLyYeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyYeuCau.Designer.cs">
+      <DependentUpon>FormQuanLyYeuCau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormDangNhap.resx">
+    <EmbeddedResource Include="View\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormChonCa.resx">
+      <DependentUpon>FormChonCa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLyCanBo.resx">
+    <EmbeddedResource Include="View\FormQuanLyCanBo.resx">
       <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTrangChu.resx">
+    <EmbeddedResource Include="View\FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormQuanLyYeuCau.resx">
+    <EmbeddedResource Include="View\FormQuanLyYeuCau.resx">
       <DependentUpon>FormQuanLyYeuCau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormChonCa.resx">
-      <DependentUpon>FormChonCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,6 +165,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FormChonCa.datasource" />
+    <None Include="Properties\DataSources\FormQuanLyCanBo.datasource" />
+    <None Include="Properties\DataSources\FormQuanLyYeuCau.datasource" />
+    <None Include="Properties\DataSources\QLNV.Model.CanBo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -172,6 +185,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

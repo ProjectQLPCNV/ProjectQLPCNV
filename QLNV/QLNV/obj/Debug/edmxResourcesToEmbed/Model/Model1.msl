@@ -28,6 +28,7 @@
           <ScalarProperty Name="CanBoID" ColumnName="CanBoID" />
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
           <ScalarProperty Name="PhanCongID" ColumnName="PhanCongID" />
+          <ScalarProperty Name="YeuCauID" ColumnName="YeuCauID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

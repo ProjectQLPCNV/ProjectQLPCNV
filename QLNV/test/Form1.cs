@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using 
 
-namespace QLNV
+namespace test
 {
-    public partial class FormChonCa : Form
+    public partial class Form1 : Form
     {
-        public FormChonCa()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void tabPage1_Click(object sender, EventArgs e)
         {
-
+            List<YeuCau> lstYeuCau = yeuCauAPIS.GetYeuCau().ToList();
         }
     }
 }

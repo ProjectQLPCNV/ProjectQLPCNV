@@ -113,7 +113,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(498, 269);
+            this.ClientSize = new System.Drawing.Size(507, 269);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.QuenMKbutton);
             this.Controls.Add(this.txtMatKhau);

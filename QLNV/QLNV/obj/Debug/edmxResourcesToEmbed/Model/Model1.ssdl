@@ -26,6 +26,7 @@
     <Property Name="CanBoID" Type="int" />
     <Property Name="GhiChu" Type="nchar" MaxLength="50" />
     <Property Name="PhanCongID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YeuCauID" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -105,6 +106,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_PhanCong_YeuCau">
+    <End Role="YeuCau" Type="Self.YeuCau" Multiplicity="0..1" />
+    <End Role="PhanCong" Type="Self.PhanCong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YeuCau">
+        <PropertyRef Name="YeuCauID" />
+      </Principal>
+      <Dependent Role="PhanCong">
+        <PropertyRef Name="YeuCauID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="QLPCNhanVienModelStoreContainer">
     <EntitySet Name="CanBo" EntityType="Self.CanBo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CaTruc" EntityType="Self.CaTruc" Schema="dbo" store:Type="Tables" />
@@ -126,6 +139,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_PhanCong_CaTruc" Association="Self.FK_PhanCong_CaTruc">
       <End Role="CaTruc" EntitySet="CaTruc" />
+      <End Role="PhanCong" EntitySet="PhanCong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhanCong_YeuCau" Association="Self.FK_PhanCong_YeuCau">
+      <End Role="YeuCau" EntitySet="YeuCau" />
       <End Role="PhanCong" EntitySet="PhanCong" />
     </AssociationSet>
   </EntityContainer>

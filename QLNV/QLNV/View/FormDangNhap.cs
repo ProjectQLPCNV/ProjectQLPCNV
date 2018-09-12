@@ -17,7 +17,6 @@ namespace QLNV
         {
             InitializeComponent();
         }
-        QLNVNhanVienEntities ef = new QLNVNhanVienEntities();
         public void DangNhapbutton_Click(object sender, EventArgs e)
         {
             Login.LoginUser(txtTaiKhoan.Text, txtMatKhau.Text);

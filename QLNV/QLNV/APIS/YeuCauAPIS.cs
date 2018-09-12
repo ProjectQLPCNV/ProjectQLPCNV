@@ -10,7 +10,7 @@ namespace QLNV.APIS
 {
     class YeuCauAPIS
     {
-        QLNVNhanVienEntities db = new QLNVNhanVienEntities();
+        QLPCNhanVienEntities db = new QLPCNhanVienEntities();
         //GetYeuCau
         public IQueryable<YeuCau> GetYeuCau()
         {

@@ -9,7 +9,7 @@ namespace QLNV.APIS
 {
     public class CanBoAPIS
     {
-        QLNVNhanVienEntities db = new QLNVNhanVienEntities();
+        QLPCNhanVienEntities db = new QLPCNhanVienEntities();
         public IQueryable<CanBo> GetCanBo()
         {
             return db.CanBo;

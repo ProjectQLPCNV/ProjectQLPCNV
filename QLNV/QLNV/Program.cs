@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNV.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace QLNV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormQuanLyYeuCau());
+            Application.Run(new FormChonCa());
         }
     }
 }

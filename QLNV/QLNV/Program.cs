@@ -17,7 +17,7 @@ namespace QLNV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormChonCa());
+            Application.Run(new FormQuanLyYeuCau());
         }
     }
 }

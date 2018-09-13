@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gridYeuCau = new System.Windows.Forms.DataGridView();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -40,12 +41,31 @@
             this.txtSoNguoiLam = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.yeuCauIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTrucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongCaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuongNguoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.caTrucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridYeuCau)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // gridYeuCau
             // 
+            this.gridYeuCau.AllowUserToAddRows = false;
+            this.gridYeuCau.AllowUserToDeleteRows = false;
+            this.gridYeuCau.AutoGenerateColumns = false;
             this.gridYeuCau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridYeuCau.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.yeuCauIDDataGridViewTextBoxColumn,
+            this.ngayTrucDataGridViewTextBoxColumn,
+            this.soLuongCaDataGridViewTextBoxColumn,
+            this.soLuongNguoiDataGridViewTextBoxColumn,
+            this.caTrucDataGridViewTextBoxColumn,
+            this.PhanCong});
+            this.gridYeuCau.DataSource = this.yeuCauBindingSource;
             this.gridYeuCau.Location = new System.Drawing.Point(12, 12);
             this.gridYeuCau.Name = "gridYeuCau";
             this.gridYeuCau.RowTemplate.Height = 24;
@@ -146,6 +166,52 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(519, 22);
             this.dateTimePicker1.TabIndex = 13;
             // 
+            // yeuCauBindingSource
+            // 
+            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
+            // 
+            // yeuCauIDDataGridViewTextBoxColumn
+            // 
+            this.yeuCauIDDataGridViewTextBoxColumn.DataPropertyName = "YeuCauID";
+            this.yeuCauIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.yeuCauIDDataGridViewTextBoxColumn.Name = "yeuCauIDDataGridViewTextBoxColumn";
+            this.yeuCauIDDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // ngayTrucDataGridViewTextBoxColumn
+            // 
+            this.ngayTrucDataGridViewTextBoxColumn.DataPropertyName = "NgayTruc";
+            this.ngayTrucDataGridViewTextBoxColumn.HeaderText = "NgayTruc";
+            this.ngayTrucDataGridViewTextBoxColumn.Name = "ngayTrucDataGridViewTextBoxColumn";
+            this.ngayTrucDataGridViewTextBoxColumn.Width = 170;
+            // 
+            // soLuongCaDataGridViewTextBoxColumn
+            // 
+            this.soLuongCaDataGridViewTextBoxColumn.DataPropertyName = "SoLuongCa";
+            this.soLuongCaDataGridViewTextBoxColumn.HeaderText = "SLCa";
+            this.soLuongCaDataGridViewTextBoxColumn.Name = "soLuongCaDataGridViewTextBoxColumn";
+            this.soLuongCaDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // soLuongNguoiDataGridViewTextBoxColumn
+            // 
+            this.soLuongNguoiDataGridViewTextBoxColumn.DataPropertyName = "SoLuongNguoi";
+            this.soLuongNguoiDataGridViewTextBoxColumn.HeaderText = "SLNguoi";
+            this.soLuongNguoiDataGridViewTextBoxColumn.Name = "soLuongNguoiDataGridViewTextBoxColumn";
+            this.soLuongNguoiDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // caTrucDataGridViewTextBoxColumn
+            // 
+            this.caTrucDataGridViewTextBoxColumn.DataPropertyName = "CaTruc";
+            this.caTrucDataGridViewTextBoxColumn.HeaderText = "CaTruc";
+            this.caTrucDataGridViewTextBoxColumn.Name = "caTrucDataGridViewTextBoxColumn";
+            this.caTrucDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // PhanCong
+            // 
+            this.PhanCong.DataPropertyName = "PhanCong";
+            this.PhanCong.HeaderText = "PhanCong";
+            this.PhanCong.Name = "PhanCong";
+            this.PhanCong.Width = 90;
+            // 
             // FormQuanLyYeuCau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,6 +233,7 @@
             this.Text = "QuanLyYeuCau";
             this.Load += new System.EventHandler(this.FormQuanLyYeuCau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridYeuCau)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +253,12 @@
         private System.Windows.Forms.TextBox txtSoNguoiLam;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.BindingSource yeuCauBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn yeuCauIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayTrucDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongCaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soLuongNguoiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn caTrucDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PhanCong;
     }
 }

@@ -115,6 +115,12 @@
     <Compile Include="View\FormQuanLyCanBo.Designer.cs">
       <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormThem.Designer.cs">
+      <DependentUpon>FormThem.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormQuanLyCanBo.resx">
       <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormThem.resx">
+      <DependentUpon>FormThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
@@ -169,6 +178,7 @@
     <None Include="Properties\DataSources\FormQuanLyCanBo.datasource" />
     <None Include="Properties\DataSources\FormQuanLyYeuCau.datasource" />
     <None Include="Properties\DataSources\QLNV.Model.CanBo.datasource" />
+    <None Include="Properties\DataSources\QLNV.Model.YeuCau.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

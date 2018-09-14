@@ -37,4 +37,4 @@ C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.exe
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.pdb
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.Form1.resources
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormChonCa.resources
-C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormThem.resources
+C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormThemSua.resources

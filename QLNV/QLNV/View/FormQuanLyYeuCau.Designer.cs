@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gridYeuCau = new System.Windows.Forms.DataGridView();
+            this.PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -41,13 +42,13 @@
             this.txtSoNguoiLam = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yeuCauIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayTrucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongCaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongNguoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caTrucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridYeuCau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -73,9 +74,16 @@
             this.gridYeuCau.TabIndex = 0;
             this.gridYeuCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridYeuCau_CellClick);
             // 
+            // PhanCong
+            // 
+            this.PhanCong.DataPropertyName = "PhanCong";
+            this.PhanCong.HeaderText = "PhanCong";
+            this.PhanCong.Name = "PhanCong";
+            this.PhanCong.Width = 90;
+            // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(551, 318);
+            this.btnTimKiem.Location = new System.Drawing.Point(570, 317);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
             this.btnTimKiem.TabIndex = 1;
@@ -84,7 +92,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(632, 318);
+            this.btnSua.Location = new System.Drawing.Point(651, 317);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 2;
@@ -93,7 +101,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(713, 317);
+            this.btnXoa.Location = new System.Drawing.Point(732, 317);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 3;
@@ -102,11 +110,11 @@
             // 
             // BtnTaoCa
             // 
-            this.BtnTaoCa.Location = new System.Drawing.Point(713, 381);
+            this.BtnTaoCa.Location = new System.Drawing.Point(725, 380);
             this.BtnTaoCa.Name = "BtnTaoCa";
             this.BtnTaoCa.Size = new System.Drawing.Size(75, 23);
             this.BtnTaoCa.TabIndex = 5;
-            this.BtnTaoCa.Text = "Tạo Ca";
+            this.BtnTaoCa.Text = "Them Ca";
             this.BtnTaoCa.UseVisualStyleBackColor = true;
             this.BtnTaoCa.Click += new System.EventHandler(this.BtnTaoCa_Click);
             // 
@@ -163,12 +171,8 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 318);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(519, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(471, 22);
             this.dateTimePicker1.TabIndex = 13;
-            // 
-            // yeuCauBindingSource
-            // 
-            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
             // 
             // yeuCauIDDataGridViewTextBoxColumn
             // 
@@ -205,18 +209,26 @@
             this.caTrucDataGridViewTextBoxColumn.Name = "caTrucDataGridViewTextBoxColumn";
             this.caTrucDataGridViewTextBoxColumn.Width = 75;
             // 
-            // PhanCong
+            // yeuCauBindingSource
             // 
-            this.PhanCong.DataPropertyName = "PhanCong";
-            this.PhanCong.HeaderText = "PhanCong";
-            this.PhanCong.Name = "PhanCong";
-            this.PhanCong.Width = 90;
+            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(489, 317);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "XemCa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormQuanLyYeuCau
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(818, 454);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSoNguoiLam);
@@ -260,5 +272,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuongNguoiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn caTrucDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhanCong;
+        private System.Windows.Forms.Button button1;
     }
 }

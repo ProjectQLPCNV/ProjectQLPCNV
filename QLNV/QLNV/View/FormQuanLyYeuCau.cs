@@ -47,32 +47,66 @@ namespace QLNV
             //gridYeuCau.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //gridYeuCau.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
+        List<CaTruc> TaoCaTrucMacDinh()
+        {
+            List<CaTruc> lstCaTruc = new List<CaTruc>();
+            lstCaTruc.Add(new CaTruc()
+            {
+                TenCa = "Ca 1",
+            });
+            lstCaTruc.Add(new CaTruc()
+            {
+                TenCa = "Ca 2",
+            });
+            lstCaTruc.Add(new CaTruc()
+            {
+                TenCa = "Ca 3",
+            });
+            lstCaTruc.Add(new CaTruc()
+            {
+                TenCa = "Ca 4",
+            });
+            lstCaTruc.Add(new CaTruc()
+            {
+                TenCa = "Ca 5",
+            });
+           
+            return lstCaTruc;
+        }
         private void BtnTaoCa_Click(object sender, EventArgs e)
         {
-            FormChonCa f = new FormChonCa();
+            
+            YeuCau addYeuCau = new YeuCau();
+            addYeuCau.SoLuongCa = int.Parse(txtSoLuongCa.Text.ToString());
+            addYeuCau.SoLuongNguoi = int.Parse(txtSoNguoiLam.Text.ToString());
+            addYeuCau.NgayTruc = DateTime.Parse(dtNgayNhap.Text.ToString());
+            List<CaTruc> lstCaTruc = TaoCaTrucMacDinh();
+            foreach(CaTruc caTruc in lstCaTruc)
+            {
+                addYeuCau.CaTruc.Add(caTruc);
+            }
+            yeuCauAPIS.PostYeuCau(addYeuCau);
+            List<CaTruc> CaTruc = addYeuCau.CaTruc.ToList();
+            FormChonCa f = new FormChonCa(CaTruc);
             f.Show();
-            //YeuCau addYeuCau = new YeuCau();
-            //addYeuCau.SoLuongCa = int.Parse(txtSoLuongCa.Text.ToString());
-            //addYeuCau.SoLuongNguoi = int.Parse(txtSoNguoiLam.Text.ToString());
-            //addYeuCau.NgayTruc = DateTime.Parse(dtNgayNhap.Text.ToString());
-            //for(int i=0; i < addYeuCau.SoLuongCa; i++)
-            //{
-            //    string tenCa = "Ca " + (i + 1);
-            //    addYeuCau.CaTruc.Add(new CaTruc()
-            //    {
-            //        TenCa=tenCa
-            //    });
-            //}
-            //yeuCauAPIS.PostYeuCau(addYeuCau);
-   
-            //gridYeuCau.DataSource = null;
-            //getDataGrid();
+            gridYeuCau.DataSource = null;
+            getDataGrid();
         }
 
         private void gridYeuCau_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = this.gridYeuCau.Rows[e.RowIndex];
-            int i= int.Parse(row.Cells["YeuCauID"].Value.ToString());
+            //DataGridViewRow row = this.gridYeuCau.Rows[e.RowIndex];
+            //int i= int.Parse(row.Cells["YeuCauID"].Value.ToString());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int rowId = gridYeuCau.SelectedCells[0].RowIndex;
+            int id = int.Parse(gridYeuCau.Rows[rowId].Cells[0].Value.ToString());
+            YeuCau yeuCau=db.YeuCau.SingleOrDefault(x => x.YeuCauID == id);
+            List < CaTruc > lstCaTruc = yeuCau.CaTruc.ToList();
+            FormChonCa chonCa = new FormChonCa(lstCaTruc);
+            chonCa.Show();
         }
     }
 }

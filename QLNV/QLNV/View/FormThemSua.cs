@@ -7,39 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLNV.APIS;
 using QLNV.Model;
+using QLNV.APIS;
 
 namespace QLNV.View
 {
-    public partial class FormThem : Form
+    public partial class FormThemSua : Form
     {
-        public CanBo canBoInfo
-        {
-            get { return canBoBindingSource.Current as CanBo; }
-        }
-        public FormThem(CanBo obj)
+        public FormThemSua(CanBo obj)
         {
             InitializeComponent();
             canBoBindingSource.DataSource = obj;
         }
-
-        private void label2_Click(object sender, EventArgs e)
+        public CanBo canBoInfo
         {
-
+            get { return canBoBindingSource.Current as CanBo; }
+        }
+        private void FormThemSua_Load(object sender, EventArgs e)
+        {
+           
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormThem_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             canBoBindingSource.EndEdit();
             DialogResult = DialogResult.OK;

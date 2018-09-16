@@ -44,7 +44,7 @@
             this.DangNhapbutton.Name = "DangNhapbutton";
             this.DangNhapbutton.Size = new System.Drawing.Size(90, 34);
             this.DangNhapbutton.TabIndex = 0;
-            this.DangNhapbutton.Text = "DangNhap";
+            this.DangNhapbutton.Text = "Đăng Nhập";
             this.DangNhapbutton.UseVisualStyleBackColor = true;
             this.DangNhapbutton.Click += new System.EventHandler(this.DangNhapbutton_Click);
             // 
@@ -57,7 +57,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Tai Khoan";
+            this.label1.Text = "Tài Khoản";
             // 
             // label2
             // 
@@ -68,7 +68,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Mat Khau";
+            this.label2.Text = "Mật Khẩu";
             // 
             // txtTaiKhoan
             // 
@@ -92,7 +92,7 @@
             this.QuenMKbutton.Name = "QuenMKbutton";
             this.QuenMKbutton.Size = new System.Drawing.Size(90, 34);
             this.QuenMKbutton.TabIndex = 5;
-            this.QuenMKbutton.Text = "QuenMK";
+            this.QuenMKbutton.Text = "Quên MK";
             this.QuenMKbutton.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -124,7 +124,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormDangNhap";
-            this.Text = "DangNhap";
+            this.Text = "Đăng Nhập";
             this.ResumeLayout(false);
             this.PerformLayout();
 

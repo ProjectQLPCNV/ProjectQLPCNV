@@ -35,6 +35,6 @@ C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.csproj.CoreCom
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.csproj.CopyComplete
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.exe
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.pdb
-C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.Form1.resources
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormChonCa.resources
-C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormThemSua.resources
+C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormThemSuaCB.resources
+C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV\obj\Debug\QLNV.View.FormSuaYeuCau.resources

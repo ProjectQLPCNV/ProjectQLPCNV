@@ -12,9 +12,9 @@ using QLNV.APIS;
 
 namespace QLNV.View
 {
-    public partial class FormThemSua : Form
+    public partial class FormThemSuaCB : Form
     {
-        public FormThemSua(CanBo obj)
+        public FormThemSuaCB(CanBo obj)
         {
             InitializeComponent();
             canBoBindingSource.DataSource = obj;
@@ -32,6 +32,11 @@ namespace QLNV.View
         {
             canBoBindingSource.EndEdit();
             DialogResult = DialogResult.OK;
+        }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

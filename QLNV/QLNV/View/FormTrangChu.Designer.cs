@@ -104,7 +104,7 @@
             // 
             this.tKTheoNgayToolStripMenuItem.Enabled = false;
             this.tKTheoNgayToolStripMenuItem.Name = "tKTheoNgayToolStripMenuItem";
-            this.tKTheoNgayToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tKTheoNgayToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.tKTheoNgayToolStripMenuItem.Text = "TK Theo Ngày";
             this.tKTheoNgayToolStripMenuItem.Click += new System.EventHandler(this.tKTheoToolStripMenuItem_Click);
             // 
@@ -112,14 +112,14 @@
             // 
             this.tKCaTheoCánBộToolStripMenuItem.Enabled = false;
             this.tKCaTheoCánBộToolStripMenuItem.Name = "tKCaTheoCánBộToolStripMenuItem";
-            this.tKCaTheoCánBộToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tKCaTheoCánBộToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.tKCaTheoCánBộToolStripMenuItem.Text = "TK Ca Theo Cán Bộ";
             // 
             // tKCaTheoĐơnVịToolStripMenuItem
             // 
             this.tKCaTheoĐơnVịToolStripMenuItem.Enabled = false;
             this.tKCaTheoĐơnVịToolStripMenuItem.Name = "tKCaTheoĐơnVịToolStripMenuItem";
-            this.tKCaTheoĐơnVịToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.tKCaTheoĐơnVịToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.tKCaTheoĐơnVịToolStripMenuItem.Text = "TK Ca Theo Đơn Vị";
             // 
             // menuStrip2
@@ -142,7 +142,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip2;
             this.Name = "FormTrangChu";
-            this.Text = "TrangChu";
+            this.Text = "Trang Chủ";
             this.Load += new System.EventHandler(this.FormTrangChu_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();

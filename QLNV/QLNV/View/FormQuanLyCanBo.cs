@@ -23,23 +23,7 @@ namespace QLNV
         QLPCNhanVienEntities db = new QLPCNhanVienEntities();
         private void btnLoad_Click(object sender, EventArgs e)
         {
-            canBoBindingSource.DataSource = db.CanBo.ToList(); 
-            //foreach(DbEntityEntry entry in db.ChangeTracker.Entries())
-            //{
-            //    switch (entry.State)
-            //    {
-            //        case System.Data.Entity.EntityState.Added:
-            //            entry.State = System.Data.Entity.EntityState.Detached;
-            //            break;
-            //        case System.Data.Entity.EntityState.Modified:
-            //            entry.State = System.Data.Entity.EntityState.Unchanged;
-            //            break;
-            //        case System.Data.Entity.EntityState.Deleted:
-            //            entry.Reload();
-            //            break;
-
-            //    }
-            //}
+            
         }
 
         private void FormQuanLyCanBo_Load(object sender, EventArgs e)
@@ -49,7 +33,7 @@ namespace QLNV
 
         private async void btnThem_Click(object sender, EventArgs e)
         {
-            FormThemSua f = new FormThemSua(new CanBo());
+            FormThemSuaCB f = new FormThemSuaCB(new CanBo());
             {
                 if (f.ShowDialog() == DialogResult.OK)
                 {
@@ -72,7 +56,7 @@ namespace QLNV
             CanBo canBo = canBoBindingSource.Current as CanBo;
             if (canBo != null)
             {
-                FormThemSua f = new FormThemSua(canBo);
+                FormThemSuaCB f = new FormThemSuaCB(canBo);
                 {
                     if (f.ShowDialog() == DialogResult.OK)
                     {
@@ -103,7 +87,7 @@ namespace QLNV
                     db.SaveChanges();
                 }catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message);
                 }
                 canBoBindingSource.DataSource = db.CanBo.ToList();
             }
@@ -112,6 +96,31 @@ namespace QLNV
         private void btnLuu_Click(object sender, EventArgs e)   
         {
 
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.HoTen.Contains(txtTimKiem.Text)).ToList();
+        }
+
+        private void txtChuVu_TextChanged(object sender, EventArgs e)
+        {
+            dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.ChucVu.Contains(txtChuVu.Text)).ToList();
+        }
+
+        private void txtDonVi_TextChanged(object sender, EventArgs e)
+        {
+            dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.DonVi.Contains(txtDonVi.Text)).ToList();
         }
     }
 }

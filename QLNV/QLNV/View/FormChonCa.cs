@@ -24,7 +24,6 @@ namespace QLNV.View
         private void FormChonCa_Load(object sender, EventArgs e)
         {
             canBoBindingSource.DataSource = db.CanBo.ToList();
-            
         }
         List<CanBo> lstCBPhanCong = new List<CanBo>();
         List<CanBo> lstCBBoPhanCong = new List<CanBo>();
@@ -37,6 +36,7 @@ namespace QLNV.View
                 if (Convert.ToBoolean(row.Cells["Chon"].Value))
                 {
                     canBoBindingSource1.Add((CanBo)row.DataBoundItem);
+                    canBoBindingSource3.Add((CanBo)row.DataBoundItem);
                     canBoBindingSource.RemoveAt(row.Index);
                     lstCBDuocChon.Add((CanBo)row.DataBoundItem);
                     lstCBPhanCong.Add((CanBo)row.DataBoundItem);
@@ -54,14 +54,15 @@ namespace QLNV.View
                 if (Convert.ToBoolean(row.Cells["Chon1"].Value))
                 {
                     canBoBindingSource.Add((CanBo)row.DataBoundItem);
-                    canBoBindingSource1.RemoveAt(row.Index);    
+                    canBoBindingSource1.RemoveAt(row.Index);
+                    canBoBindingSource3.RemoveAt(row.Index);
                 }
             }
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -72,6 +73,26 @@ namespace QLNV.View
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtGridTrai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

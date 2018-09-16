@@ -1,6 +1,6 @@
 ﻿namespace QLNV.View
 {
-    partial class FormThemSua
+    partial class FormThemSuaCB
     {
         /// <summary>
         /// Required designer variable.
@@ -47,36 +47,36 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(19, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "HovaTen";
+            this.label1.Text = "Họ và Tên";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "ChucVu";
+            this.label3.Text = "Chức Vụ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(19, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.Size = new System.Drawing.Size(50, 17);
             this.label4.TabIndex = 3;
-            this.label4.Text = "DonVi";
+            this.label4.Text = "Đơn Vị";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.Size = new System.Drawing.Size(73, 17);
             this.label5.TabIndex = 4;
-            this.label5.Text = "NgaySinh";
+            this.label5.Text = "Ngày Sinh";
             // 
             // txtHoTen
             // 
@@ -85,6 +85,7 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(265, 22);
             this.txtHoTen.TabIndex = 1;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
             // 
             // canBoBindingSource
             // 
@@ -95,7 +96,7 @@
             this.txtDonVi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.canBoBindingSource, "DonVi", true));
             this.txtDonVi.Location = new System.Drawing.Point(94, 101);
             this.txtDonVi.Name = "txtDonVi";
-            this.txtDonVi.Size = new System.Drawing.Size(72, 22);
+            this.txtDonVi.Size = new System.Drawing.Size(265, 22);
             this.txtDonVi.TabIndex = 3;
             // 
             // txtNgaySinh
@@ -103,7 +104,7 @@
             this.txtNgaySinh.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.canBoBindingSource, "NgaySinh", true));
             this.txtNgaySinh.Location = new System.Drawing.Point(94, 73);
             this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(132, 22);
+            this.txtNgaySinh.Size = new System.Drawing.Size(265, 22);
             this.txtNgaySinh.TabIndex = 2;
             // 
             // txtChuVu
@@ -111,20 +112,20 @@
             this.txtChuVu.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.canBoBindingSource, "ChucVu", true));
             this.txtChuVu.Location = new System.Drawing.Point(94, 129);
             this.txtChuVu.Name = "txtChuVu";
-            this.txtChuVu.Size = new System.Drawing.Size(132, 22);
+            this.txtChuVu.Size = new System.Drawing.Size(265, 22);
             this.txtChuVu.TabIndex = 4;
             // 
             // btnLuu
             // 
             this.btnLuu.Location = new System.Drawing.Point(284, 174);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.Size = new System.Drawing.Size(75, 31);
             this.btnLuu.TabIndex = 9;
-            this.btnLuu.Text = "Luu";
+            this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // FormThemSua
+            // FormThemSuaCB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,8 +139,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "FormThemSua";
-            this.Text = "FormThemSua";
+            this.Name = "FormThemSuaCB";
+            this.Text = "Thêm/Sửa Cán Bộ";
             this.Load += new System.EventHandler(this.FormThemSua_Load);
             ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource)).EndInit();
             this.ResumeLayout(false);

@@ -33,20 +33,20 @@ namespace QLNV
             yeuCauBindingSource.DataSource = db.YeuCau.ToList();
         }
         YeuCauAPIS yeuCauAPIS = new YeuCauAPIS();
-        void getDataGrid()
-        {
-            //List<YeuCau> lstYeuCau = yeuCauAPIS.GetYeuCau().ToList();
-            //gridYeuCau.DataSource = lstYeuCau;
-            //gridYeuCau.Columns[0].HeaderText = "Mã Yêu Cầu";
-            //gridYeuCau.Columns[1].HeaderText = "Ngày Trực";
-            //gridYeuCau.Columns[2].HeaderText = "SL Ca Trực";
-            //gridYeuCau.Columns[4].HeaderText = "SL Người Trực";
-            //gridYeuCau.Columns.Remove("User");
-            //gridYeuCau.Columns.Remove("IDAdmin");
-            //gridYeuCau.Columns.Remove("CaTruc");
-            //gridYeuCau.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //gridYeuCau.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-        }
+        //void getDataGrid()
+        //{
+        //    List<YeuCau> lstYeuCau = yeuCauAPIS.GetYeuCau().ToList();
+        //    gridYeuCau.DataSource = lstYeuCau;
+        //    gridYeuCau.Columns[0].HeaderText = "Mã Yêu Cầu";
+        //    gridYeuCau.Columns[1].HeaderText = "Ngày Trực";
+        //    gridYeuCau.Columns[2].HeaderText = "SL Ca Trực";
+        //    gridYeuCau.Columns[4].HeaderText = "SL Người Trực";
+        //    gridYeuCau.Columns.Remove("User");
+        //    gridYeuCau.Columns.Remove("IDAdmin");
+        //    gridYeuCau.Columns.Remove("CaTruc");
+        //    gridYeuCau.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        //    gridYeuCau.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+        //}
         List<CaTruc> TaoCaTrucMacDinh()
         {
             List<CaTruc> lstCaTruc = new List<CaTruc>();
@@ -90,7 +90,7 @@ namespace QLNV
             FormChonCa f = new FormChonCa(CaTruc);
             f.Show();
             gridYeuCau.DataSource = null;
-            getDataGrid();
+            //getDataGrid();
         }
 
         private void gridYeuCau_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -107,6 +107,85 @@ namespace QLNV
             List < CaTruc > lstCaTruc = yeuCau.CaTruc.ToList();
             FormChonCa chonCa = new FormChonCa(lstCaTruc);
             chonCa.Show();
+        }
+
+        private async void btnSua_Click(object sender, EventArgs e)
+        {
+            YeuCau yeuCau = yeuCauBindingSource.Current as YeuCau;
+            if (yeuCau != null)
+            {
+                FormSuaYeuCau f = new FormSuaYeuCau(yeuCau);
+                {
+                    if (f.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            yeuCauBindingSource.EndEdit();
+                            await db.SaveChangesAsync();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Mesage", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Ban Co Chac Muon Xoa Khong?", "Mesage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int rowId = gridYeuCau.SelectedCells[0].RowIndex;
+                int id = int.Parse(gridYeuCau.Rows[rowId].Cells[0].Value.ToString());
+                YeuCau yeuCau = db.YeuCau.SingleOrDefault(x => x.YeuCauID == id);
+                db.YeuCau.Remove(yeuCau);
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                yeuCauBindingSource.DataSource = db.YeuCau.ToList();
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtNgayNhap_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoLuongCa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

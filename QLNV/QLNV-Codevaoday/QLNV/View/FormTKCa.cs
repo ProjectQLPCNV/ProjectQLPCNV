@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNV.View
 {
-    public partial class Form2 : Form
+    public partial class FormTKCa : Form
     {
-        public Form2()
+        public FormTKCa()
         {
             InitializeComponent();
         }

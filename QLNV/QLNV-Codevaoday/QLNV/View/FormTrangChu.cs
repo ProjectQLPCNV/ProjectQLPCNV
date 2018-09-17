@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLNV.Model;
+using QLNV.View;
 
 namespace QLNV
 {
@@ -50,18 +52,33 @@ namespace QLNV
             {
                 quảnLýYêuCầuToolStripMenuItem.Enabled = true;
                 quảnLýCánBộToolStripMenuItem.Enabled = true;
-
             }
         }
-
-        private void tKTheoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Login.isLoginSess)
             {
-                tKCaTheoCánBộToolStripMenuItem.Enabled = true;
-                tKCaTheoĐơnVịToolStripMenuItem.Enabled = true;
-                tKTheoNgayToolStripMenuItem.Enabled = true;
+                tKTheoCaToolStripMenuItem.Enabled = true;
+                tKTheoNgàyToolStripMenuItem.Enabled = true;
+                tKTheoCánBộToolStripMenuItem.Enabled = true;
             }
+        }
+        private void tKTheoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTKNgay f = new FormTKNgay();
+            f.Show();
+        }
+
+        private void tKTheoCánBộToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTKCanBo f = new FormTKCanBo();
+            f.Show();
+        }
+
+        private void tKTheoCaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTKCa f = new FormTKCa();
+            f.Show();
         }
     }
 }

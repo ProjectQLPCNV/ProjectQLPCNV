@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.txtSLNguoi = new System.Windows.Forms.TextBox();
+            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtSLCa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnLuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -45,6 +45,10 @@
             this.txtSLNguoi.Name = "txtSLNguoi";
             this.txtSLNguoi.Size = new System.Drawing.Size(189, 22);
             this.txtSLNguoi.TabIndex = 0;
+            // 
+            // yeuCauBindingSource
+            // 
+            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
             // 
             // txtSLCa
             // 
@@ -72,10 +76,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "SL Ca Trực";
             // 
-            // yeuCauBindingSource
-            // 
-            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
-            // 
             // btnLuu
             // 
             this.btnLuu.Location = new System.Drawing.Point(244, 146);
@@ -98,6 +98,7 @@
             this.Controls.Add(this.txtSLNguoi);
             this.Name = "FormSuaYeuCau";
             this.Text = "Sửa Yêu Cầu";
+            this.Load += new System.EventHandler(this.FormSuaYeuCau_Load);
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -27,5 +27,10 @@ namespace QLNV.View
             yeuCauBindingSource.EndEdit();
             DialogResult = DialogResult.OK;
         }
+
+        private void FormSuaYeuCau_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

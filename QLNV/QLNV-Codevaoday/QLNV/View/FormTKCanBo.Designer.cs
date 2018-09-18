@@ -61,7 +61,7 @@
             // toDateSticker
             // 
             this.toDateSticker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.toDateSticker.Location = new System.Drawing.Point(333, 51);
+            this.toDateSticker.Location = new System.Drawing.Point(260, 51);
             this.toDateSticker.Name = "toDateSticker";
             this.toDateSticker.Size = new System.Drawing.Size(139, 22);
             this.toDateSticker.TabIndex = 1;
@@ -78,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 51);
+            this.label2.Location = new System.Drawing.Point(220, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(582, 48);
+            this.btnThongKe.Location = new System.Drawing.Point(693, 51);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(95, 33);
             this.btnThongKe.TabIndex = 3;

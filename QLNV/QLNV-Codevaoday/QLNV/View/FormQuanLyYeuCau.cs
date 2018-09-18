@@ -28,7 +28,6 @@ namespace QLNV
         QLPCNhanVienEntities db=new QLPCNhanVienEntities();
         private void FormQuanLyYeuCau_Load(object sender, EventArgs e)
         {
-            //Đoạn này load được đc hết DB vào GridView luôn nhưng vẫn theo thứ tự
             yeuCauBindingSource.DataSource = db.YeuCau.ToList();
         }
         YeuCauAPIS yeuCauAPIS = new YeuCauAPIS();
@@ -46,28 +45,38 @@ namespace QLNV
             //gridYeuCau.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //gridYeuCau.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
-        List<CaTruc> TaoCaTrucMacDinh()
+        List<CaTruc> TaoCaTrucMacDinh(DateTime dateTime)
         {
             List<CaTruc> lstCaTruc = new List<CaTruc>();
             lstCaTruc.Add(new CaTruc()
             {
                 TenCa = "Ca 1",
+                BatDau = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 7, 0, 0),
+                KetThuc = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 9, 30, 0)
             });
             lstCaTruc.Add(new CaTruc()
             {
                 TenCa = "Ca 2",
+                KetThuc = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 11, 30, 0),
+                BatDau = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 9, 30, 0)
             });
             lstCaTruc.Add(new CaTruc()
             {
                 TenCa = "Ca 3",
+                BatDau = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 11, 30, 0),
+                KetThuc = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 15, 30, 0)
             });
             lstCaTruc.Add(new CaTruc()
             {
                 TenCa = "Ca 4",
+                BatDau = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 15, 30, 0),
+                KetThuc = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 18, 30, 0)
             });
             lstCaTruc.Add(new CaTruc()
             {
                 TenCa = "Ca 5",
+                BatDau = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 18, 30, 0),
+                KetThuc = new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 20, 30, 0)
             });
            
             return lstCaTruc;
@@ -79,7 +88,8 @@ namespace QLNV
             addYeuCau.SoLuongCa = int.Parse(txtSoLuongCa.Text.ToString());
             addYeuCau.SoLuongNguoi = int.Parse(txtSoNguoiLam.Text.ToString());
             addYeuCau.NgayTruc = DateTime.Parse(dtNgayNhap.Text.ToString());
-            List<CaTruc> lstCaTruc = TaoCaTrucMacDinh();
+            DateTime date = DateTime.Parse(addYeuCau.NgayTruc.ToString());
+            List<CaTruc> lstCaTruc = TaoCaTrucMacDinh(date);
             foreach(CaTruc caTruc in lstCaTruc)
             {
                 addYeuCau.CaTruc.Add(caTruc);

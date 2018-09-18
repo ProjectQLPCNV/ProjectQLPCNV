@@ -120,7 +120,7 @@ namespace QLNV
 
         private void txtDonVi_TextChanged(object sender, EventArgs e)
         {
-            dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.DonVi.Contains(txtDonVi.Text)).ToList();
+            //dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.DonVi.Contains(txtDonVi.Text)).ToList();
         }
     }
 }

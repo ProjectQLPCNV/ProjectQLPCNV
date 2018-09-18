@@ -7,7 +7,7 @@
     <Property Name="CanBoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
     <Property Name="NgaySinh" Type="datetime" />
-    <Property Name="DonVi" Type="nvarchar" MaxLength="20" />
+    <Property Name="DonViID" Type="int" />
     <Property Name="ChucVu" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="CaTruc">
@@ -16,7 +16,16 @@
     </Key>
     <Property Name="CaTrucID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="YeuCauID" Type="int" />
+    <Property Name="BatDau" Type="datetime" />
+    <Property Name="KetThuc" Type="datetime" />
     <Property Name="TenCa" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="DonVi">
+    <Key>
+      <PropertyRef Name="DonViID" />
+    </Key>
+    <Property Name="DonViID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDonVI" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="PhanCong">
     <Key>
@@ -70,6 +79,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_CanBo_DonVi">
+    <End Role="DonVi" Type="Self.DonVi" Multiplicity="0..1" />
+    <End Role="CanBo" Type="Self.CanBo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonVi">
+        <PropertyRef Name="DonViID" />
+      </Principal>
+      <Dependent Role="CanBo">
+        <PropertyRef Name="DonViID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_CaTruc_BangYeuCau">
     <End Role="YeuCau" Type="Self.YeuCau" Multiplicity="0..1" />
     <End Role="CaTruc" Type="Self.CaTruc" Multiplicity="*" />
@@ -82,7 +103,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PhanCong_BangCanBo">
+  <Association Name="FK_PhanCong_CanBo">
     <End Role="CanBo" Type="Self.CanBo" Multiplicity="0..1" />
     <End Role="PhanCong" Type="Self.PhanCong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -121,6 +142,7 @@
   <EntityContainer Name="QLPCNhanVienModelStoreContainer">
     <EntitySet Name="CanBo" EntityType="Self.CanBo" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CaTruc" EntityType="Self.CaTruc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DonVi" EntityType="Self.DonVi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PhanCong" EntityType="Self.PhanCong" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
@@ -129,11 +151,15 @@
       <End Role="User" EntitySet="User" />
       <End Role="YeuCau" EntitySet="YeuCau" />
     </AssociationSet>
+    <AssociationSet Name="FK_CanBo_DonVi" Association="Self.FK_CanBo_DonVi">
+      <End Role="DonVi" EntitySet="DonVi" />
+      <End Role="CanBo" EntitySet="CanBo" />
+    </AssociationSet>
     <AssociationSet Name="FK_CaTruc_BangYeuCau" Association="Self.FK_CaTruc_BangYeuCau">
       <End Role="YeuCau" EntitySet="YeuCau" />
       <End Role="CaTruc" EntitySet="CaTruc" />
     </AssociationSet>
-    <AssociationSet Name="FK_PhanCong_BangCanBo" Association="Self.FK_PhanCong_BangCanBo">
+    <AssociationSet Name="FK_PhanCong_CanBo" Association="Self.FK_PhanCong_CanBo">
       <End Role="CanBo" EntitySet="CanBo" />
       <End Role="PhanCong" EntitySet="PhanCong" />
     </AssociationSet>

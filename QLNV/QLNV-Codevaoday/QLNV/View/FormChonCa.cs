@@ -33,7 +33,7 @@ namespace QLNV.View
         QLPCNhanVienEntities db = new QLPCNhanVienEntities();
         private void FormChonCa_Load(object sender, EventArgs e)
         {
-            canBoBindingSource2.DataSource = db.CanBo.ToList();
+            canBoBindingSource.DataSource = db.CanBo.ToList();
             dtBatDau.Format = DateTimePickerFormat.Custom;
             dtBatDau.CustomFormat = "HH:mm"; // Only use hours and minutes
             dtBatDau.ShowUpDown = true;
@@ -49,35 +49,40 @@ namespace QLNV.View
         CaTruc caTrucEdit;
         private void btnPhai_Click(object sender, EventArgs e)
         {
-            if(caTrucEdit== null)
+            if (caTrucEdit == null)
             {
                 MessageBox.Show("Ấn Nút 'Xem' Ca Chực Để Chọn Ca");
                 return;
-            } 
-            for(int i= dtGridTrai.RowCount - 1; i >= 0; i--)
+            }
+            for (int i= dtGridTrai.RowCount - 1; i >= 0; i--)
             {
                 int? SoViec = yeuCauEdit.PhanCong.Count;
                 DataGridViewRow row = dtGridTrai.Rows[i];
+                bool ae = Convert.ToBoolean(row.Cells["Chon"].Value);
                 if (Convert.ToBoolean(row.Cells["Chon"].Value))
                 {
                     if(lstCBDuocChon.Count <= yeuCauEdit.SoLuongNguoi && SoViec+1 < yeuCauEdit.SoLuongCa)
                     {
                         CanBo canBo = (CanBo)row.DataBoundItem;
-                        List<PhanCong> lstPhancong = canBo.PhanCong.ToList().FindAll(x => x.YeuCau.NgayTruc == yeuCauEdit.NgayTruc);
+                        List<PhanCong> lstPhancong = new List<PhanCong>();
+                        if (canBo.PhanCong.Count != 0)
+                        {
+                             lstPhancong = canBo.PhanCong.ToList().FindAll(x => x.YeuCau.NgayTruc == yeuCauEdit.NgayTruc);
+                        }
+                       
                         if (lstPhancong.Count > 0)
                         {
                             foreach (PhanCong phanCong in lstPhancong)
                             {
-                                int c = DateTime.Compare((DateTime)phanCong.CaTruc.BatDau, (DateTime)caTrucEdit.BatDau);
-                                int b = DateTime.Compare((DateTime)phanCong.CaTruc.KetThuc, (DateTime)caTrucEdit.BatDau);
                                 if (DateTime.Compare((DateTime)phanCong.CaTruc.BatDau, (DateTime)caTrucEdit.BatDau) == 0 && DateTime.Compare((DateTime)caTrucEdit.BatDau, (DateTime)phanCong.CaTruc.KetThuc) == -1)
                                 {
                                     MessageBox.Show("Cán bộ "+canBo.HoTen+"trùng ca trực");
                                 }
                                 else
                                 {
-                                    canBoBindingSource1.Add((CanBo)row.DataBoundItem);
-                                    canBoBindingSource2.RemoveAt(row.Index);
+                                    canBoBindingSource4.Add((CanBo)row.DataBoundItem);
+                                    canBoBindingSource3.Add((CanBo)row.DataBoundItem);
+                                    canBoBindingSource.RemoveAt(row.Index);
                                     lstCBDuocChon.Add(canBo);
                                     lstCBPhanCong.Add(canBo);
                                 }
@@ -85,10 +90,11 @@ namespace QLNV.View
                         }
                         else
                         {
-                            canBoBindingSource1.Add((CanBo)row.DataBoundItem);
-                            canBoBindingSource2.RemoveAt(row.Index);
-                                    lstCBDuocChon.Add((CanBo)row.DataBoundItem);
-                            lstCBPhanCong.Add(canBo);
+                            canBoBindingSource4.Add((CanBo)row.DataBoundItem);
+                            canBoBindingSource3.Add((CanBo)row.DataBoundItem);
+                            canBoBindingSource.RemoveAt(row.Index);
+                            lstCBDuocChon.Add((CanBo)row.DataBoundItem);
+                            //lstCBPhanCong.Add(canBo);
                         }
                        
                     }
@@ -104,19 +110,21 @@ namespace QLNV.View
 
         private void btnTrai_Click(object sender, EventArgs e)
         {
-            if(caTrucEdit== null)
+            if (caTrucEdit == null)
             {
                 MessageBox.Show("Ấn Nút 'Xem' Ca Chực Để Chọn Ca");
                 return;
-            } 
-            for(int i=dtGribPhai.RowCount - 1; i >= 0; i--)
+            }
+            for (int i=dtGribPhai.RowCount - 1; i >= 0; i--)
             {
 
                 DataGridViewRow row = dtGribPhai.Rows[i];
                 if (Convert.ToBoolean(row.Cells["Chon1"].Value))
                 {
                     canBoBindingSource.Add((CanBo)row.DataBoundItem);
-                    canBoBindingSource1.RemoveAt(row.Index);
+                    canBoBindingSource4.RemoveAt(row.Index);
+                    canBoBindingSource3.RemoveAt(row.Index);
+
                     lstCBBoPhanCong.Add((CanBo)row.DataBoundItem);
                 }
             }
@@ -172,7 +180,7 @@ namespace QLNV.View
             {
                 lstCBPhanCong.Add(phanCong.CanBo);
             }
-            dtGribPhai.DataSource = lstCBPhanCong;
+            //dtGribPhai.DataSource = lstCBPhanCong;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -181,6 +189,11 @@ namespace QLNV.View
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtGridTrai_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gridYeuCau = new System.Windows.Forms.DataGridView();
+            this.PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -42,13 +43,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yeuCauIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayTrucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongCaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuongNguoiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.caTrucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridYeuCau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,12 +74,20 @@
             this.gridYeuCau.TabIndex = 0;
             this.gridYeuCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridYeuCau_CellClick);
             // 
+            // PhanCong
+            // 
+            this.PhanCong.DataPropertyName = "PhanCong";
+            this.PhanCong.HeaderText = "Phân Công";
+            this.PhanCong.Name = "PhanCong";
+            this.PhanCong.Width = 90;
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.Location = new System.Drawing.Point(570, 317);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 23);
-            this.btnTimKiem.TabIndex = 1;
+            this.btnTimKiem.TabIndex = 3;
+            this.btnTimKiem.Tag = "3";
             this.btnTimKiem.Text = "Tìm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
@@ -88,7 +96,8 @@
             this.btnSua.Location = new System.Drawing.Point(651, 317);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 2;
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Tag = "4";
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -98,7 +107,8 @@
             this.btnXoa.Location = new System.Drawing.Point(732, 317);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 3;
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Tag = "5";
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -108,7 +118,8 @@
             this.BtnTaoCa.Location = new System.Drawing.Point(725, 380);
             this.BtnTaoCa.Name = "BtnTaoCa";
             this.BtnTaoCa.Size = new System.Drawing.Size(75, 23);
-            this.BtnTaoCa.TabIndex = 5;
+            this.BtnTaoCa.TabIndex = 9;
+            this.BtnTaoCa.Tag = "9";
             this.BtnTaoCa.Text = "Thêm Ca";
             this.BtnTaoCa.UseVisualStyleBackColor = true;
             this.BtnTaoCa.Click += new System.EventHandler(this.BtnTaoCa_Click);
@@ -119,6 +130,7 @@
             this.txtSoLuongCa.Name = "txtSoLuongCa";
             this.txtSoLuongCa.Size = new System.Drawing.Size(177, 22);
             this.txtSoLuongCa.TabIndex = 7;
+            this.txtSoLuongCa.Tag = "7";
             // 
             // label1
             // 
@@ -143,14 +155,16 @@
             this.dtNgayNhap.Location = new System.Drawing.Point(12, 382);
             this.dtNgayNhap.Name = "dtNgayNhap";
             this.dtNgayNhap.Size = new System.Drawing.Size(300, 22);
-            this.dtNgayNhap.TabIndex = 10;
+            this.dtNgayNhap.TabIndex = 6;
+            this.dtNgayNhap.Tag = "6";
             // 
             // txtSoNguoiLam
             // 
             this.txtSoNguoiLam.Location = new System.Drawing.Point(501, 381);
             this.txtSoNguoiLam.Name = "txtSoNguoiLam";
             this.txtSoNguoiLam.Size = new System.Drawing.Size(206, 22);
-            this.txtSoNguoiLam.TabIndex = 11;
+            this.txtSoNguoiLam.TabIndex = 8;
+            this.txtSoNguoiLam.Tag = "8";
             this.txtSoNguoiLam.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -167,21 +181,19 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(12, 318);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(300, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker1.TabIndex = 1;
+            this.dateTimePicker1.Tag = "";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(318, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 2;
+            this.button1.Tag = "2";
             this.button1.Text = "Xem Ca";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // yeuCauBindingSource
-            // 
-            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
             // 
             // yeuCauIDDataGridViewTextBoxColumn
             // 
@@ -218,12 +230,9 @@
             this.caTrucDataGridViewTextBoxColumn.Name = "caTrucDataGridViewTextBoxColumn";
             this.caTrucDataGridViewTextBoxColumn.Width = 75;
             // 
-            // PhanCong
+            // yeuCauBindingSource
             // 
-            this.PhanCong.DataPropertyName = "PhanCong";
-            this.PhanCong.HeaderText = "Phân Công";
-            this.PhanCong.Name = "PhanCong";
-            this.PhanCong.Width = 90;
+            this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
             // 
             // FormQuanLyYeuCau
             // 

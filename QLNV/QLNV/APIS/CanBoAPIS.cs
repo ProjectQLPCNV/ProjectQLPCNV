@@ -23,10 +23,6 @@ namespace QLNV.APIS
         {
             return db.CanBo.SingleOrDefault(x => x.HoTen == hoten);
         }
-        public CanBo GetCanBoDonVi(string donVi)
-        {
-            return db.CanBo.SingleOrDefault(x => x.DonVi == donVi);
-        }
         public CanBo GetCanBoChucVu(string chucVu)
         {
             return db.CanBo.SingleOrDefault(x => x.ChucVu == chucVu);

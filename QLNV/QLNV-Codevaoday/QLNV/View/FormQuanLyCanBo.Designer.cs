@@ -30,24 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dtGridQLCanBo = new System.Windows.Forms.DataGridView();
-            this.canBoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.CanBoID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donViDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phanCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.canBoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtChuVu = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.canBoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.DonVi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridQLCanBo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtGridQLCanBo
@@ -62,47 +65,15 @@
             this.ngaySinhDataGridViewTextBoxColumn,
             this.donViDataGridViewTextBoxColumn,
             this.chucVuDataGridViewTextBoxColumn,
-            this.phanCongDataGridViewTextBoxColumn});
+            this.phanCongDataGridViewTextBoxColumn,
+            this.DonVi});
             this.dtGridQLCanBo.DataSource = this.canBoBindingSource;
             this.dtGridQLCanBo.Location = new System.Drawing.Point(12, 12);
             this.dtGridQLCanBo.Name = "dtGridQLCanBo";
             this.dtGridQLCanBo.RowTemplate.Height = 24;
             this.dtGridQLCanBo.Size = new System.Drawing.Size(874, 382);
             this.dtGridQLCanBo.TabIndex = 0;
-            // 
-            // canBoBindingSource
-            // 
-            this.canBoBindingSource.DataSource = typeof(QLNV.Model.CanBo);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(787, 465);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(99, 42);
-            this.btnXoa.TabIndex = 1;
-            this.btnXoa.Text = "Xoa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(515, 463);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(99, 43);
-            this.btnThem.TabIndex = 4;
-            this.btnThem.Text = "Them";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(653, 465);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(99, 42);
-            this.btnSua.TabIndex = 5;
-            this.btnSua.Text = "Sua";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.dtGridQLCanBo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridQLCanBo_CellContentClick);
             // 
             // CanBoID
             // 
@@ -144,13 +115,47 @@
             this.phanCongDataGridViewTextBoxColumn.HeaderText = "Phân Công";
             this.phanCongDataGridViewTextBoxColumn.Name = "phanCongDataGridViewTextBoxColumn";
             // 
+            // canBoBindingSource
+            // 
+            this.canBoBindingSource.DataSource = typeof(QLNV.Model.CanBo);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(776, 450);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(99, 42);
+            this.btnXoa.TabIndex = 1;
+            this.btnXoa.Text = "Xoa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(504, 448);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(99, 43);
+            this.btnThem.TabIndex = 4;
+            this.btnThem.Text = "Them";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(642, 450);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(99, 42);
+            this.btnSua.TabIndex = 5;
+            this.btnSua.Text = "Sua";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtChuVu);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTimKiem);
-            this.groupBox1.Location = new System.Drawing.Point(12, 407);
+            this.groupBox1.Location = new System.Drawing.Point(12, 400);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(468, 100);
             this.groupBox1.TabIndex = 16;
@@ -193,6 +198,16 @@
             this.txtTimKiem.TabIndex = 6;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
+            // canBoBindingSource1
+            // 
+            this.canBoBindingSource1.DataSource = typeof(QLNV.Model.CanBo);
+            // 
+            // DonVi
+            // 
+            this.DonVi.DataPropertyName = "DonVi";
+            this.DonVi.HeaderText = "Đơn Vị";
+            this.DonVi.Name = "DonVi";
+            // 
             // FormQuanLyCanBo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -210,6 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +248,7 @@
         private System.Windows.Forms.TextBox txtChuVu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.BindingSource canBoBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonVi;
     }
 }

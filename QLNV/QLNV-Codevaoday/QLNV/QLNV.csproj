@@ -116,6 +116,12 @@
     <Compile Include="View\FormQuanLyCanBo.Designer.cs">
       <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormQuanLyDoVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyDoVi.Designer.cs">
+      <DependentUpon>FormQuanLyDoVi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormSuaYeuCau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     <EmbeddedResource Include="View\FormQuanLyCanBo.resx">
       <DependentUpon>FormQuanLyCanBo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyDoVi.resx">
+      <DependentUpon>FormQuanLyDoVi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormSuaYeuCau.resx">
       <DependentUpon>FormSuaYeuCau.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +221,7 @@
     <None Include="Properties\DataSources\FormQuanLyCanBo.datasource" />
     <None Include="Properties\DataSources\FormQuanLyYeuCau.datasource" />
     <None Include="Properties\DataSources\QLNV.Model.CanBo.datasource" />
+    <None Include="Properties\DataSources\QLNV.Model.DonVi.datasource" />
     <None Include="Properties\DataSources\QLNV.Model.YeuCau.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

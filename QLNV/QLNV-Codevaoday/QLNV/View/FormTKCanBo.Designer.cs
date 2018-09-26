@@ -35,15 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dtGridTKCanBo = new System.Windows.Forms.DataGridView();
-            this.canBoIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donViIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chucVuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donViDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phanCongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.canBoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yeuCauBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbbTimTen = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridTKCanBo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).BeginInit();
@@ -52,7 +47,7 @@
             // fromDateSticker
             // 
             this.fromDateSticker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fromDateSticker.Location = new System.Drawing.Point(45, 51);
+            this.fromDateSticker.Location = new System.Drawing.Point(44, 46);
             this.fromDateSticker.Name = "fromDateSticker";
             this.fromDateSticker.Size = new System.Drawing.Size(150, 22);
             this.fromDateSticker.TabIndex = 1;
@@ -61,7 +56,7 @@
             // toDateSticker
             // 
             this.toDateSticker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.toDateSticker.Location = new System.Drawing.Point(260, 51);
+            this.toDateSticker.Location = new System.Drawing.Point(259, 46);
             this.toDateSticker.Name = "toDateSticker";
             this.toDateSticker.Size = new System.Drawing.Size(139, 22);
             this.toDateSticker.TabIndex = 1;
@@ -69,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 51);
+            this.label1.Location = new System.Drawing.Point(13, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 2;
@@ -78,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(220, 51);
+            this.label2.Location = new System.Drawing.Point(219, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 2;
@@ -86,9 +81,9 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(693, 51);
+            this.btnThongKe.Location = new System.Drawing.Point(693, 32);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(95, 33);
+            this.btnThongKe.Size = new System.Drawing.Size(95, 31);
             this.btnThongKe.TabIndex = 3;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -96,64 +91,13 @@
             // 
             // dtGridTKCanBo
             // 
-            this.dtGridTKCanBo.AutoGenerateColumns = false;
             this.dtGridTKCanBo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridTKCanBo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.canBoIDDataGridViewTextBoxColumn,
-            this.hoTenDataGridViewTextBoxColumn,
-            this.ngaySinhDataGridViewTextBoxColumn,
-            this.donViIDDataGridViewTextBoxColumn,
-            this.chucVuDataGridViewTextBoxColumn,
-            this.donViDataGridViewTextBoxColumn,
-            this.phanCongDataGridViewTextBoxColumn});
-            this.dtGridTKCanBo.DataSource = this.canBoBindingSource;
-            this.dtGridTKCanBo.Location = new System.Drawing.Point(12, 100);
+            this.dtGridTKCanBo.Location = new System.Drawing.Point(17, 79);
             this.dtGridTKCanBo.Name = "dtGridTKCanBo";
             this.dtGridTKCanBo.RowTemplate.Height = 24;
-            this.dtGridTKCanBo.Size = new System.Drawing.Size(776, 338);
-            this.dtGridTKCanBo.TabIndex = 5;
-            // 
-            // canBoIDDataGridViewTextBoxColumn
-            // 
-            this.canBoIDDataGridViewTextBoxColumn.DataPropertyName = "CanBoID";
-            this.canBoIDDataGridViewTextBoxColumn.HeaderText = "CanBoID";
-            this.canBoIDDataGridViewTextBoxColumn.Name = "canBoIDDataGridViewTextBoxColumn";
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            // 
-            // donViIDDataGridViewTextBoxColumn
-            // 
-            this.donViIDDataGridViewTextBoxColumn.DataPropertyName = "DonViID";
-            this.donViIDDataGridViewTextBoxColumn.HeaderText = "DonViID";
-            this.donViIDDataGridViewTextBoxColumn.Name = "donViIDDataGridViewTextBoxColumn";
-            // 
-            // chucVuDataGridViewTextBoxColumn
-            // 
-            this.chucVuDataGridViewTextBoxColumn.DataPropertyName = "ChucVu";
-            this.chucVuDataGridViewTextBoxColumn.HeaderText = "ChucVu";
-            this.chucVuDataGridViewTextBoxColumn.Name = "chucVuDataGridViewTextBoxColumn";
-            // 
-            // donViDataGridViewTextBoxColumn
-            // 
-            this.donViDataGridViewTextBoxColumn.DataPropertyName = "DonVi";
-            this.donViDataGridViewTextBoxColumn.HeaderText = "DonVi";
-            this.donViDataGridViewTextBoxColumn.Name = "donViDataGridViewTextBoxColumn";
-            // 
-            // phanCongDataGridViewTextBoxColumn
-            // 
-            this.phanCongDataGridViewTextBoxColumn.DataPropertyName = "PhanCong";
-            this.phanCongDataGridViewTextBoxColumn.HeaderText = "PhanCong";
-            this.phanCongDataGridViewTextBoxColumn.Name = "phanCongDataGridViewTextBoxColumn";
+            this.dtGridTKCanBo.Size = new System.Drawing.Size(670, 354);
+            this.dtGridTKCanBo.TabIndex = 4;
+            this.dtGridTKCanBo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridTKCanBo_CellContentClick);
             // 
             // canBoBindingSource
             // 
@@ -163,11 +107,32 @@
             // 
             this.yeuCauBindingSource.DataSource = typeof(QLNV.Model.YeuCau);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(423, 46);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Tên Cán Bộ";
+            // 
+            // cbbTimTen
+            // 
+            this.cbbTimTen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.canBoBindingSource, "HoTen", true));
+            this.cbbTimTen.FormattingEnabled = true;
+            this.cbbTimTen.Location = new System.Drawing.Point(512, 44);
+            this.cbbTimTen.Name = "cbbTimTen";
+            this.cbbTimTen.Size = new System.Drawing.Size(175, 24);
+            this.cbbTimTen.TabIndex = 6;
+            this.cbbTimTen.SelectedIndexChanged += new System.EventHandler(this.cbbTimTen_SelectedIndexChanged);
+            // 
             // FormTKCanBo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbbTimTen);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dtGridTKCanBo);
             this.Controls.Add(this.btnThongKe);
             this.Controls.Add(this.label2);
@@ -176,6 +141,7 @@
             this.Controls.Add(this.fromDateSticker);
             this.Name = "FormTKCanBo";
             this.Text = "Thống Kê Cán Bộ";
+            this.Load += new System.EventHandler(this.FormTKCanBo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridTKCanBo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.canBoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauBindingSource)).EndInit();
@@ -193,12 +159,7 @@
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.BindingSource yeuCauBindingSource;
         private System.Windows.Forms.DataGridView dtGridTKCanBo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn canBoIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donViIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chucVuDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donViDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phanCongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbbTimTen;
     }
 }

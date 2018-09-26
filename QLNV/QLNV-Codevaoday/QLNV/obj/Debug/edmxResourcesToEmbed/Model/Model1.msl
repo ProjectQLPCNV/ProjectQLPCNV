@@ -4,8 +4,8 @@
     <EntitySetMapping Name="CanBo">
       <EntityTypeMapping TypeName="QLPCNhanVienModel.CanBo">
         <MappingFragment StoreEntitySet="CanBo">
-          <ScalarProperty Name="ChucVu" ColumnName="ChucVu" />
           <ScalarProperty Name="DonViID" ColumnName="DonViID" />
+          <ScalarProperty Name="ChuVu" ColumnName="ChuVu" />
           <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
           <ScalarProperty Name="HoTen" ColumnName="HoTen" />
           <ScalarProperty Name="CanBoID" ColumnName="CanBoID" />

@@ -4,11 +4,11 @@
     <Key>
       <PropertyRef Name="CanBoID" />
     </Key>
-    <Property Name="CanBoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
+    <Property Name="CanBoID" Type="int" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="255" />
     <Property Name="NgaySinh" Type="datetime" />
+    <Property Name="ChuVu" Type="nvarchar" MaxLength="255" />
     <Property Name="DonViID" Type="int" />
-    <Property Name="ChucVu" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="CaTruc">
     <Key>
@@ -79,7 +79,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_CanBo_DonVi">
+  <Association Name="FK_CanBo_DonVi1">
     <End Role="DonVi" Type="Self.DonVi" Multiplicity="0..1" />
     <End Role="CanBo" Type="Self.CanBo" Multiplicity="*" />
     <ReferentialConstraint>
@@ -103,7 +103,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_PhanCong_CanBo">
+  <Association Name="FK_PhanCong_CanBo1">
     <End Role="CanBo" Type="Self.CanBo" Multiplicity="0..1" />
     <End Role="PhanCong" Type="Self.PhanCong" Multiplicity="*" />
     <ReferentialConstraint>
@@ -151,7 +151,7 @@
       <End Role="User" EntitySet="User" />
       <End Role="YeuCau" EntitySet="YeuCau" />
     </AssociationSet>
-    <AssociationSet Name="FK_CanBo_DonVi" Association="Self.FK_CanBo_DonVi">
+    <AssociationSet Name="FK_CanBo_DonVi1" Association="Self.FK_CanBo_DonVi1">
       <End Role="DonVi" EntitySet="DonVi" />
       <End Role="CanBo" EntitySet="CanBo" />
     </AssociationSet>
@@ -159,7 +159,7 @@
       <End Role="YeuCau" EntitySet="YeuCau" />
       <End Role="CaTruc" EntitySet="CaTruc" />
     </AssociationSet>
-    <AssociationSet Name="FK_PhanCong_CanBo" Association="Self.FK_PhanCong_CanBo">
+    <AssociationSet Name="FK_PhanCong_CanBo1" Association="Self.FK_PhanCong_CanBo1">
       <End Role="CanBo" EntitySet="CanBo" />
       <End Role="PhanCong" EntitySet="PhanCong" />
     </AssociationSet>

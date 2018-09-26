@@ -85,6 +85,8 @@ namespace QLNV.View
                                     canBoBindingSource.RemoveAt(row.Index);
                                     lstCBDuocChon.Add(canBo);
                                     lstCBPhanCong.Add(canBo);
+                                    dtGribPhai.DataSource = null;
+                                    dtGribPhai.DataSource = lstPhancong;
                                 }
                             }
                         }
@@ -94,7 +96,9 @@ namespace QLNV.View
                             canBoBindingSource3.Add((CanBo)row.DataBoundItem);
                             canBoBindingSource.RemoveAt(row.Index);
                             lstCBDuocChon.Add((CanBo)row.DataBoundItem);
-                            //lstCBPhanCong.Add(canBo);
+                            lstCBPhanCong.Add(canBo);
+                            dtGribPhai.DataSource = null;
+                            dtGribPhai.DataSource = lstCBPhanCong;
                         }
                        
                     }
@@ -180,7 +184,7 @@ namespace QLNV.View
             {
                 lstCBPhanCong.Add(phanCong.CanBo);
             }
-            //dtGribPhai.DataSource = lstCBPhanCong;
+            dtGribPhai.DataSource = lstCBPhanCong;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -194,6 +198,11 @@ namespace QLNV.View
         }
 
         private void dtGridTrai_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

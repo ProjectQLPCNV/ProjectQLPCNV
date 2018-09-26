@@ -52,6 +52,7 @@ namespace QLNV
             {
                 quảnLýYêuCầuToolStripMenuItem.Enabled = true;
                 quảnLýCánBộToolStripMenuItem.Enabled = true;
+                quảnLýĐơnVịToolStripMenuItem.Enabled = true;
             }
         }
         private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,6 +79,12 @@ namespace QLNV
         private void tKTheoCaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTKCa f = new FormTKCa();
+            f.Show();
+        }
+
+        private void quảnLýĐơnVịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormQuanLyDoVi f =new  FormQuanLyDoVi();
             f.Show();
         }
     }

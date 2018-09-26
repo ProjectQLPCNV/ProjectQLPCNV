@@ -29,7 +29,7 @@ namespace QLNV.APIS
         }
         public CanBo GetCanBoChucVu(string chucVu)
         {
-            return db.CanBo.SingleOrDefault(x => x.ChucVu == chucVu);
+            return db.CanBo.SingleOrDefault(x => x.ChuVu == chucVu);
         }
         public CanBo GetCanBoNgaySinh(DateTime ngaySinh)
         {
@@ -65,7 +65,7 @@ namespace QLNV.APIS
                 CanBo.HoTen = canBo.HoTen;
                 CanBo.NgaySinh = canBo.NgaySinh;
                 CanBo.DonVi = canBo.DonVi;
-                canBo.ChucVu = canBo.ChucVu;
+                canBo.ChuVu = canBo.ChuVu;
             }
         }
         //UpdateYeuCau

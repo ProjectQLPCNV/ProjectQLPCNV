@@ -110,12 +110,17 @@ namespace QLNV
 
         private void txtChuVu_TextChanged(object sender, EventArgs e)
         {
-            dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.ChucVu.Contains(txtChuVu.Text)).ToList();
+            dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.ChuVu.Contains(txtChuVu.Text)).ToList();
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             dtGridQLCanBo.DataSource = db.CanBo.Where(x => x.HoTen.Contains(txtTimKiem.Text)).ToList();
+        }
+
+        private void dtGridQLCanBo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -106,3 +106,4 @@ C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV-Codevaoday\QLNV\bin\Debug\Dap
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV-Codevaoday\QLNV\bin\Debug\Dapper.xml
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV-Codevaoday\QLNV\obj\Debug\QLNV.View.FormTKCa.resources
 C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV-Codevaoday\QLNV\obj\Debug\QLNV.View.FormTKNgay.resources
+C:\Users\Admin\Desktop\Git\ProjectQLPCNV\QLNV\QLNV-Codevaoday\QLNV\obj\Debug\QLNV.View.FormQuanLyDoVi.resources

@@ -40,6 +40,8 @@ namespace QLNV.View
                     canBoBindingSource.RemoveAt(row.Index);
                     lstCBDuocChon.Add((CanBo)row.DataBoundItem);
                     lstCBPhanCong.Add((CanBo)row.DataBoundItem);
+                    dtGribPhai.DataSource = null;
+                    dtGribPhai.DataSource = lstCBPhanCong;
                 }
                
             }

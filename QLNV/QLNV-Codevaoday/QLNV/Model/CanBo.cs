@@ -23,8 +23,8 @@ namespace QLNV.Model
         public int CanBoID { get; set; }
         public string HoTen { get; set; }
         public Nullable<System.DateTime> NgaySinh { get; set; }
+        public string ChuVu { get; set; }
         public Nullable<int> DonViID { get; set; }
-        public string ChucVu { get; set; }
     
         public virtual DonVi DonVi { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

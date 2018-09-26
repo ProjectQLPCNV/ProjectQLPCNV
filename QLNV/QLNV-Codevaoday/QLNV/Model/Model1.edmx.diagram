@@ -12,8 +12,8 @@
         <EntityTypeShape EntityType="QLPCNhanVienModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" />
         <EntityTypeShape EntityType="QLPCNhanVienModel.User" Width="1.5" PointX="0.75" PointY="1.125" />
         <EntityTypeShape EntityType="QLPCNhanVienModel.YeuCau" Width="1.5" PointX="3" PointY="1" />
-        <AssociationConnector Association="QLPCNhanVienModel.FK_CanBo_DonVi" />
-        <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_CanBo" />
+        <AssociationConnector Association="QLPCNhanVienModel.FK_CanBo_DonVi1" />
+        <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_CanBo1" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_CaTruc_BangYeuCau" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_CaTruc" />
         <AssociationConnector Association="QLPCNhanVienModel.FK_PhanCong_YeuCau" />
